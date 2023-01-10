@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: tests-values
+  namespace: sscs
+spec:
+  encryptedData:
+    slack-webhook: AgChP4X+wDICFMATWjPKeZH9MKzwoTAJ7KHwMit2jof3FWsyIXw+d16ucCjrS5BHFGqHnb8IOIOJe794LC7VoWCMIqZU0NRie5vEZZvJ9IqXpfwCMOpq+5AlOUgrwR49OokVPnxwXZ2QobaDFWSMmfCX6DE5eIIxZ6mfcikf5CHwrSYM5gS4nFsj4021WVZr42xtYgEe6JcJ+IhFzWT2M/TehaQotdENLhwAI19o6+weKerAmBhcgN7pduhf6Zaz99nFxVEMpfN/jBZvdO2Poo3o4WlL9mpIgfKByVM5a0k8k1PeFRfHbbGEna3L3adMcy4n43JwLxqEvP6AhIYSn67mMwiHUG5X47Me60UyM62FW89ooSMZ2koXlzuy9GgAfYzPxjT1N8KgoPW86+PYDiG25sbV5IWeQu+UOEiZEqicszgu/15iLwEqDOz/kViDbh1v8PQZzdnLxbN6rISxNoLQNK0r9i+uQYP/JuRohGimI9wgRRnJ+X97+LKysas5JlwsvfjJwFB3zPA2N71X+P4IqxgL10MFZIHDXEJC55oe2fPcMIUVfpiqwvS0hKOcMt3ne4mZ+nGnsjmxV3gkye9yNUyMlrzy4zRJiAzzuOzTRtcNJBSUPEIi9tf2fSiMQF9gj9SJC8nfdBX4ku9hUiSMgM0sOW3ciPtnARXt22pnLgmRopTGdxtdbnJB81xHCHf8epI/BGsHUXR5CaG1bcDNpp0UrEdq8ubftTxihmlLmihXpFD4yTCARJQon50Ou40yHh6hBFXQeDmLcYd9FG58yVtLHaAc15QTziw8OA==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: tests-values
+      namespace: sscs
+    type: Opaque
+

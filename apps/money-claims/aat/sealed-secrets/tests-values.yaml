@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: tests-values
+  namespace: money-claims
+spec:
+  encryptedData:
+    slack-webhook: AgChodW48tvNPgTiiYKYDmxjtrFVsc/bJxilT0VBWXF43SxNY91OixoC3mufjf3K5H1npdhomDbbHFSrDpoRScY+PH1yPe8I+zTYZUdHhfQeWzarNyyVJJ3BPnL6BD1Ws3qbbqF0GJJdMZQ97O4gaXClCfW89R60Wlz5tG9t69pDd0OZCLCpL95onNQlOSwF6uKKDKbyeJ+vjSyTHgex8WROUn7fGLPMBG+3MaoQpoMiX2xexGB1W/QFHXCTFEFicqzxWiHsM9lVx93aCrmfxki136sUuv78fWOiFC3/kj2pckb1hS4xS/fxEuININzYgS2aoz1e4qj/oOGoRwKGOKTlZ4Fr9dxIp2laYhojOGodt2vsS5Ui7XGvpg//WhxOYBsunMg5uL5SSq0Fs8T1JJeXKlrlG5qtfd8g3MKjCGTug+b0Mt35Y57QSjHaLn4QohtV/yiTAW1qsMyF+PoSW4bLMdeyoR8htWsDY6Ez6zb18LY3cWUnfleZcYXYILCP0jnY2IqG8Hr6vdKW23KqHuKNshWOJ5dqvOxbkbRBedhiITVG3Idzk5C9H4ZZ4oeyVhH6aCDPXgcBu56MFv9AFovZvDYlc2pQjdh8/V2YWTwdfMH+/zrPd6/W93PHDF17wfzUQEuq5pfrWuEc8IUcG5e85FGc+NpF+uDMBfEW4H2z9nzth5/Mo4nxB8GmlpERt+j2DPdMnM3wzuWgTfY1WD01LjhZB39BSdn6DnJxhsXJi5D6z46XPjs0MMVYQMNNZUZN2qT1jecldOt6+iy6QIOezTDe0oCayWENhWyhIA==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: tests-values
+      namespace: money-claims
+    type: Opaque
+

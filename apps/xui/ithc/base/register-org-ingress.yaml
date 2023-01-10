@@ -1,0 +1,33 @@
+#this is to apply permanent redirect on register-org domain
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.middlewares: xui-registerorgredirect@kubernetescrd
+  name: register-org-ingress
+  namespace: xui
+spec:
+  rules:
+    - host: register-org.ithc.platform.hmcts.net
+      http:
+        paths:
+          - backend:
+              service:
+                name: xui-mo-webapp-nodejs
+                port:
+                  number: 80
+            path: /
+            pathType: ImplementationSpecific
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: registerorgredirect
+  namespace: xui
+spec:
+  redirectRegex:
+    permanent: true
+    regex: ^http://register-org.ithc.platform.hmcts.net/(.*)
+    replacement: https://manage-org.ithc.platform.hmcts.net/register-org/register

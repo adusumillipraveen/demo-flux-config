@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: idam-web-public
+  namespace: idam
+spec:
+  values:
+    java:
+      image: hmctspublic.azurecr.io/idam/web-public:preview-b294309-20230110095249 #{"$imagepolicy": "flux-system:preview-idam-web-public"}
+      ingressHost: idam-web-public.sandbox.platform.hmcts.net
+      disableTraefikTls: true
+      replicas: 2
+      environment:
+        STRATEGIC_SERVICE_URL: http://idam-api
+  chart:
+    spec:
+      version: 0.2.23

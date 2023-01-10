@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: osba-values
+  namespace: osba
+spec:
+  encryptedData:
+    values.yaml: AgBNklc0+sN13MeBD9B+oyQA/WXP82YsI/KO6IVINVsoP9f+oIRgSokkGWigvlQhSm+/31d3f8r0qLIDMar6Ghq3FoA8nuRxR6SXPrHQYV+DMEVX0zdy76eogXjNZefZjPI9j+0smoq1oWYla3cp8dF6DBs2FrRrhKUF0mwd6ngz/1tq9OQ5OM7EUm9sRN4qFJX9Snpof1iNp7K7DaaYr3XSxj1J19sLVGmWBKlvtOrEpYnzxEqAslL5KBsqqKit5b7F/pl35fF/Kh/VEhIrsEQiuk1yPypqyfkGl2QBos/PQ+sqRxnfbsSYoaKyQo9Ww/JC0alXnTyycObbf1C8cdkirfEitQVMd+YarLo+z4z8ksLoVctAnDfaPoJb50VPP3EFtOz7AmsL3NrAWmEKB7y/NGqNhwJED2b882zMwRSnKRxlObMkmrBq91Q+rXxle9UuoiHtsSjt2NDpVR/eUJwRUabIbNZF7G7phNhKL9pcYs1coH7Z+C/fOp88yM46rGtI46PRskXpHM7y8trgzva83Kt0BzWYI2wi1fHTSx2ZBE2hsh2L9Rt/HqROpvyVthN5pcrHvKYfibdW0SCTmIPWLtZSDjbmiMXe4S5Qa+lAPjE6TnOWS88RzptGPtaLA/9Y68lCv8AwiWKK2k+P4fNwsGGVjlkcHOSapkELYIdtWGaIsyq4iu17HfRCY5/cdNac55+ZGczrI1vluSXVugUhNEbwL4XBSB7dIscP+BR4FdkFezDDMKDCE4zTXSTNz+qBMANk6DIjqrZUcT+ll3//gUH6ouWTL5YW0kgzUfULCmFimdf0AJ+SPOJCMgL+aiMrTMJtVu3/fnFUbxLOIE4b
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: osba-values
+      namespace: osba
+

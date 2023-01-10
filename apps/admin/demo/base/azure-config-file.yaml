@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: azure-config-file
+  namespace: admin
+spec:
+  encryptedData:
+    azure.json: AgAY91NN4MAVWvUTt2lBa+Y8ED6GpO/JyGmPck8TUvo94RrjH2/D7BLz9J/bnesgzINfLysa8aqO6LIuUCH6ai5g3BuF7L1NcoHTFYubw7Y2tT2PCEi2qqDNgbLnG9SPxo6b8jCc88+/wciOG8S12k265gNIAdme3NRDfbrvtnvFgYJ4AqWkFpRx4Wa80TPTKYcqgYzru6LTdXjPmfhng3zKicF2isRzgX1fIcwRTw84Vozm9z6F92FflGyF8Z3NtA/t0YUriUlro0idR7HttJakh32LX2Ny3vwCzON1F9Reak0K0FUCZVicEguQG8VpVEbkyj4bCu3lNCrmi7B67e7P+F/nXr+rEXYUYFhEBNnLZJf2npig4czzXQzxeeWJXDGr9udXEzhfAsQn4z/IrOqrSguKUIjjWUbnioLXvM/QYx18H3kdfJHHbh7R5C/e+ZjsPFqHBf0vq1uiWvUcHejy7RsThyk3NqTdP/mCPEePnufh23FCBjGMvoF43dGEUQoz+If/A24jQ20mWfnpzZfng1bKKqCPj8R0scsog9MnHe/mh9ah1YB3Vx9czW5nM3HU0oG5ClAEnpcUQMXsKYwqkaGiarqPQWOr8j669gQqX6gJSRtOetrE6JpapJ0jQ7P9RzFiPUXbAhY3TMwDayathOSp2I+hfVgZd1noAjFREmycT5qNpzH1bfJGBSbtd7Crm4btUhwkjBR1HXzXpE6i32d8tZWPrtalzAZesW6acymQBi4r23LTxLMRmvpXZauRaHXmhFJJh6FyLX6PSBREkOPz93GmmHCqYn+H4FHrbn55rIKGpwdRPkupTFRhxrZgQWzaoxhyjlefDS8XF/4/dsz732zNJLrG/YCjh3ac5jDxnH10vtUVUzfHyOxu+eizHI+99TJgYleQ0NVEQuxXojquI4d8ie1oy8BnbVq72295JedhID71SrzI3crM2WUaEDQ6SC5PLK238Mk3mCzr1szl2Qw4yUXo07h8OhGxsBLTuOOxBWie1EIyruTY2leIpHLgMVf7ZTs0nfl/0NN8pP5Atvifb2wDCchpke9s8WOr
+  template:
+    metadata:
+      creationTimestamp: null
+      name: azure-config-file
+      namespace: admin
+    type: Opaque
+

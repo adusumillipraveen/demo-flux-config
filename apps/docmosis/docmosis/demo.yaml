@@ -1,0 +1,11 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: docmosis
+spec:
+  values:
+    ingressClass: traefik-private
+    ingressHost: docmosis.demo.platform.hmcts.net
+    disableTraefikTls: false
+    disableIngressClassAnnotation: true
+    image: hmctsprivate.azurecr.io/docmosis:demo-6ae693d-320235 #{"$imagepolicy": "flux-system:demo-docmosis"}

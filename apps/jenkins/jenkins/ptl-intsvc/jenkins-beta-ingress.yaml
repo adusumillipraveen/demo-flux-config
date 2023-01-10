@@ -1,0 +1,33 @@
+#this is to apply permanent redirect on register-org domain
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.middlewares: jenkins-jenkinbuildbetaredirect@kubernetescrd
+  name: build-beta-ingress
+  namespace: jenkins
+spec:
+  rules:
+    - host: build-beta.platform.hmcts.net
+      http:
+        paths:
+          - backend:
+              service:
+                name: jenkins
+                port:
+                  number: 8080
+            path: /
+            pathType: ImplementationSpecific
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: jenkinbuildbetaredirect
+  namespace: jenkins
+spec:
+  redirectRegex:
+    permanent: true
+    regex: ^http://build-beta.platform.hmcts.net/(.*)
+    replacement: https://build.platform.hmcts.net/$1

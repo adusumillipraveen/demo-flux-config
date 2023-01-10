@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: adoption-cos-api
+spec:
+  releaseName: adoption-cos-api
+  interval: 1m
+  values:
+    java:
+      cpuLimits: "1000m"
+      cpuRequests: "500m"
+      memoryLimits: "1024Mi"
+      memoryRequests: "512Mi"
+      replicas: 2
+      readinessDelay: 45
+      readinessTimeout: 5
+      readinessPeriod: 15
+      useInterpodAntiAffinity: true
+      image: hmctspublic.azurecr.io/adoption/cos-api:prod-e5f41f4-20221209134344 #{"$imagepolicy": "flux-system:adoption-cos-api"}
+  chart:
+    spec:
+      chart: ./stable/adoption-cos-api
+      sourceRef:
+        kind: GitRepository
+        name: hmcts-charts
+        namespace: flux-system
+      interval: 1m

@@ -1,0 +1,40 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: finrem-cos
+  namespace: financial-remedy
+spec:
+  values:
+    java:
+      disableIngressClassAnnotation: true
+      ingressClass: traefik-private
+      image: hmctspublic.azurecr.io/finrem/cos:prod-0fb831f-20230110100306 #{"$imagepolicy": "flux-system:demo-finrem-cos"}
+      environment:
+        FEATURE_PBA_CASE_TYPE: true
+        FEATURE_USE_USER_TOKEN: true
+        FEATURE_SOLICITOR_NOC: true
+        FEATURE_CASEWORKER_NOC: true
+        FEES_API_URL: "http://fees-register-api-demo.service.core-compute-demo.internal"
+        PAYMENT_API_URL: "http://payment-api-demo.service.core-compute-demo.internal"
+        DOCUMENT_MANAGEMENT_STORE_URL: "http://dm-store-demo.service.core-compute-demo.internal"
+        SEND_LETTER_SERVICE_BASEURL: "http://rpe-send-letter-service-demo.service.core-compute-demo.internal"
+        TRIGGER_DEPLOY: trigger1
+      keyVaults:
+        finrem:
+          secrets:
+            - name: app-insights-connection-string
+              alias: app-insights-connection-string
+            - name: finrem-case-orchestration-service-s2s-key
+              alias: AUTH_PROVIDER_SERVICE_CLIENT_KEY
+            - name: idam-secret
+              alias: OAUTH2_CLIENT_FINREM
+            - name: finrem-system-update-username
+              alias: FINREM_SYSTEMUPDATE_USERNAME
+            - name: finrem-system-update-password
+              alias: FINREM_SYSTEMUPDATE_PASSWORD
+            - name: finrem-idam-client-secret
+              alias: FINREM_IDAM_CLIENT_SECRET
+            - name: docmosis-api-key
+              alias: PDF_SERVICE_ACCESS_KEY
+            - name: docmosis-endpoint
+              alias: PDF_SERVICE_BASEURL
