@@ -6,7 +6,7 @@
     "flux": {
       "fileMatch": ["\\.yaml$"]
     },
-    “masterIssue”: true
+    “masterIssue”: true,
     "regexManagers": [
       {
         "fileMatch": ["\\.yaml$"],
