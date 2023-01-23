@@ -11,7 +11,7 @@
     {
       "fileMatch": ["^Dockerfile$"],
       "matchStrings": ["ENV APP_INSIGHTS_AGENT_VERSION=(?<currentValue>.*?)\\n"],
-      "datasource": "github-releases"
+      "datasource": "github-releases",
       "versioning": "semver" 
     }
   ]
