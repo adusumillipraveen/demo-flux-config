@@ -7,12 +7,13 @@
       "fileMatch": ["\\.yaml$"]
     },
     "masterIssue": true,
-    "regexManagers": [
+   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["ENV APP_INSIGHTS_AGENT_VERSION=(?<currentValue>.*?)\\n"],
-      "datasource": "github-releases",
-      "versioning": "semver" 
-    }
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+      ]
+     }
+  ]
   ]
   }
