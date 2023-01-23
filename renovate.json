@@ -11,7 +11,7 @@
     {
       "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+        "ENV .*?_VERSION=(?<currentValue>.*)\\s"
       ]
      }
     ]
