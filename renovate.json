@@ -10,10 +10,9 @@
     "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    },
+      "matchStrings": ["ENV APP_INSIGHTS_AGENT_VERSION=(?<currentValue>.*?)\\n"],
+      "datasource": "github-releases"
+      "versioning": "semver" 
+    }
   ]
   }
