@@ -1,6 +1,0 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageRepository
-metadata:
-  name: dg-docassembly
-spec:
-  image: hmctspublic.azurecr.io/dg/docassembly

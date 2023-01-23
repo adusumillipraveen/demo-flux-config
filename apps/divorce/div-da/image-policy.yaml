@@ -1,7 +1,0 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImagePolicy
-metadata:
-  name: div-da
-spec:
-  imageRepositoryRef:
-    name: div-da
