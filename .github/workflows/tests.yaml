@@ -17,7 +17,7 @@ jobs:
         run: |
           set -ex
           
-          KUBECONFORM_VERSION=0.6.1
+          KUBECONFORM_VERSION=0.2.2
           curl -sL https://github.com/yannh/kubeconform/releases/download/v$KUBECONFORM_VERSION/kubeconform-linux-amd64.tar.gz | tar xz
           cp kubeconform /usr/local/bin/
           chmod +x /usr/local/bin/kubeconform
