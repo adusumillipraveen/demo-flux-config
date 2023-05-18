@@ -17,8 +17,8 @@ jobs:
         run: |
           set -ex
            # renovate: datasource=github-releases depName=yannh/kubeconform
-          KUBECONFORM_VERSION=0.2.2
-          curl -sL https://github.com/yannh/kubeconform/releases/download/v$KUBECONFORM_VERSION/kubeconform-linux-amd64.tar.gz | tar xz
+          KUBECONFORM_VERSION=v0.2.2
+          curl -sL https://github.com/yannh/kubeconform/releases/download/$KUBECONFORM_VERSION/kubeconform-linux-amd64.tar.gz | tar xz
           cp kubeconform /usr/local/bin/
           chmod +x /usr/local/bin/kubeconform
       - name: Dry run and kubeconform
