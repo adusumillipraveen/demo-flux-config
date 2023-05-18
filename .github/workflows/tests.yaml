@@ -1,0 +1,25 @@
+name: Flux sanity checks
+
+# yamllint disable-line
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v
+      - name: Install kubeconform
+        run: |
+          set -ex
+          
+          KUBECONFORM_VERSION=0.6.1
+          curl -sL https://github.com/yannh/kubeconform/releases/download/v$KUBECONFORM_VERSION/kubeconform-linux-amd64.tar.gz | tar xz
+          cp kubeconform /usr/local/bin/
+          chmod +x /usr/local/bin/kubeconform
+      - name: Dry run and kubeconform
+        run: kubeconform -v
