@@ -13,7 +13,7 @@
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sARG .*?_VERSION=(?<currentValue>.*)\\s"
       ]
-     }
+     },
     {
       "fileMatch": [
         "^.github/(?:workflows|actions)/.+\\.ya?ml$"
