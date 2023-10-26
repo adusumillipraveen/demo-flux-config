@@ -1,0 +1,60 @@
+name: '🌍 Skip auto shutdown or start On demand Environment'
+description: Request that an environment is not shutdown or to start an on demand environment (automatically processed)
+body:
+- type: input
+  attributes:
+    label: Change or Jira reference
+  validations:
+    required: true
+- type: dropdown
+  id: requesttype
+  attributes:
+    label: Is the request for skipping auto shutdown or starting on demand environment
+    options:
+      - Skip Shutdown
+      - Start On Demand Environment
+  validations:
+    required: true
+
+- type: dropdown
+  id: businessarea
+  attributes:
+    label: Business area
+    options:
+      - CFT
+      - Cross-Cutting
+  validations:
+    required: true
+    
+- type: dropdown
+  id: Environment
+  attributes:
+    label: Environment
+    description: "If AAT / Staging then you may want to also select PTL for Jenkins and Preview / Dev if you need to do a pull request"
+    multiple: true
+    options:
+      - Sandbox
+      - AAT / Staging
+      - Preview / Dev
+      - Test / Perftest
+      - Demo
+      - ITHC
+      - PTL
+  validations:
+    required: true
+      
+- type: input
+  id: Start_Date
+  attributes:
+    label: Start Date for skipping auto shutdown or starting on demand envi
+    description: "DD-MM-YYYY - date covers shutdown/startup period inclusive"
+  validations:
+    required: true
+    
+- type: input
+  id: End_Date
+  attributes:
+    label: Skip shutdown end date
+    description: "DD-MM-YYYY - Defaults to start date. 20:00."
+  validations:
+    required: false
